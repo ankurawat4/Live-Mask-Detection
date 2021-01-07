@@ -3,9 +3,9 @@ import streamlit as st
 import cv2
 import numpy as np
 from PIL import Image
-import keras
+import tensorflow as tf
 
-model = keras.models.load_model('model.h5')
+model = tf.keras.models.load_model('model.h5')
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml') 
 
 def about():
