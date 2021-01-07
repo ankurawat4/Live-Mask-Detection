@@ -2,7 +2,6 @@
 import streamlit as st
 import cv2
 import numpy as np
-from process import webopencv
 import tensorflow as tf
 
 model = tf.keras.models.load_model('model.h5')
