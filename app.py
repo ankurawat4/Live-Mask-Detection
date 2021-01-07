@@ -69,7 +69,7 @@ def detect_on_image(image):
                 prob = pred_prob[0][1] * 100
                 flag = False
                 print('No Mask : prob -', prob)
-            return image_copy, prob, flag
+        return image_copy, prob, flag
         
 def detect_live_stream():
     html_component(path="webcam2.html", width=600, height=600)
