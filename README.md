@@ -11,7 +11,7 @@ live prediction is done using openCV.
 ![alt text](https://github.com/ankurawat4/Live-Mask-Detection/blob/main/fig_2.png)
 
 **transfer learning model accuracy - 0.9938**<br><br>
-![alt text](https://github.com/ankurawat4/Live-Mask-Detection/blob/main/fig_2.png)
+![alt text](https://github.com/ankurawat4/Live-Mask-Detection/blob/main/fig_1.png)
 
 **Detection**<br><br>
 ![alt text](https://github.com/ankurawat4/Live-Mask-Detection/blob/main/fig_3.png)
