@@ -2,5 +2,5 @@ numpy>=1.9.2
 streamlit
 opencv-contrib-python-headless
 tensorflow-cpu==2.2.0
-codecs
+openapi-codec
 
