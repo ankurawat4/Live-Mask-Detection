@@ -1,8 +1,6 @@
 # importing libraries 
 import streamlit as st
 import cv2
-from process import webopencv
-from camera import Camera
 import numpy as np
 from PIL import Image
 import tensorflow as tf
@@ -112,7 +110,6 @@ def detect_live_stream():
 
         #     cv2.imshow('roi', roi)
         cv2.imshow('detect', frame_copy)
-	FRAME_WINDOW.image(frame)
 	
         if cv2.waitKey(1) & 0xFF==ord('q'):
             break
