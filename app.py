@@ -7,7 +7,6 @@ import tensorflow as tf
 
 model = tf.keras.models.load_model('model.h5')
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml') 
-camera = Camera(webopencv())
 
 def about():
 	st.write(
