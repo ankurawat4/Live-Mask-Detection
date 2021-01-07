@@ -2,6 +2,7 @@
 import streamlit as st
 import cv2
 import codecs
+from PIL import Image
 import streamlit.components.v1 as stc 
 import numpy as np
 import tensorflow as tf
