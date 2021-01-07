@@ -1,6 +1,8 @@
 # importing libraries 
 import streamlit as st
 import cv2
+import codecs
+import streamlit.components.v1 as stc 
 import numpy as np
 import tensorflow as tf
 
@@ -22,6 +24,15 @@ def about():
 			
 		''')
 
+def html_component(path, width=500, height=500):
+    """ 
+    Custom component to open hmtl with codecs util
+            path = "webcam2.html"
+    """
+    calc_file = codecs.open(path, 'r')
+    page = calc_file.read()
+    stc.html(page, width=width, height=height, scrolling=False)
+	
 def detect_on_image(image):
     image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     image_copy = image.copy()     # copy of image
@@ -60,9 +71,7 @@ def detect_on_image(image):
             return image_copy, prob, flag
         
 def detect_live_stream():
-    st.title("Webcam Live Feed")
-    run = st.checkbox('Run')
-    FRAME_WINDOW = st.image([])
+    html_component(path="webcam2.html", width=600, height=600)
     cap = cv2.VideoCapture(0)
     cap.set(10, 300)
 
