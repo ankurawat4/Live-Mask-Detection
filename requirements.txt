@@ -1,6 +1,6 @@
 numpy>=1.9.2
 streamlit
 opencv-contrib-python-headless
-keras
+tensorflow-cpu==2.2.0
 
 
