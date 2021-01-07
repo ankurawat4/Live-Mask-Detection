@@ -1,0 +1,8 @@
+numpy>=1.9.2
+streamlit
+opencv-contrib-python-headless
+tensorflow==2.2.0
+PIL==8.1.0
+
+
+
