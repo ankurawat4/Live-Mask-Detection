@@ -3,5 +3,6 @@ streamlit
 opencv-contrib-python-headless
 tensorflow-cpu==2.2.0
 Pillow
+keras
 
 
