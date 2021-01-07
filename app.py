@@ -109,10 +109,6 @@ def detect_live_stream():
         if cv2.waitKey(1) & 0xFF==ord('q'):
             break
 
-        
-    cap.release()
-    cv2.destroyAllWindows()
-
 
 def main():
     st.title("Mask detection App :mask: ")
