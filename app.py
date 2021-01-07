@@ -3,8 +3,6 @@ import streamlit as st
 import cv2
 import numpy as np
 from process import webopencv
-from camera import Camera
-from PIL import Image
 import tensorflow as tf
 
 model = tf.keras.models.load_model('model.h5')
@@ -66,13 +64,12 @@ def detect_live_stream():
     st.title("Webcam Live Feed")
     run = st.checkbox('Run')
     FRAME_WINDOW = st.image([])
-    camera = Camera(webopencv())
     cap = cv2.VideoCapture(0)
     cap.set(10, 300)
 
     while run:
 
-        ret, frame = camera.read()
+        ret, frame = cap.read()
 
         if ret==False:
 
