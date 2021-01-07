@@ -2,11 +2,14 @@
 import streamlit as st
 import cv2
 import numpy as np
+from process import webopencv
+from camera import Camera
 from PIL import Image
 import tensorflow as tf
 
 model = tf.keras.models.load_model('model.h5')
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml') 
+
 
 def about():
 	st.write(
@@ -63,12 +66,13 @@ def detect_live_stream():
     st.title("Webcam Live Feed")
     run = st.checkbox('Run')
     FRAME_WINDOW = st.image([])
+    camera = Camera(webopencv())
     cap = cv2.VideoCapture(0)
     cap.set(10, 300)
 
     while run:
 
-        ret, frame = cap.read()
+        ret, frame = camera.read()
 
         if ret==False:
 
