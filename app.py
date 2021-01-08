@@ -1,9 +1,7 @@
 # importing libraries 
 import streamlit as st
 import cv2
-import codecs
 from PIL import Image
-import streamlit.components.v1 as stc 
 import numpy as np
 import tensorflow as tf
 
@@ -18,22 +16,14 @@ def about():
         a person is wearing a mask or not in live stream**
 
 		The model has four stages:
-            1. Taking frame by frame stream from webcam 
+            		1. Taking frame by frame stream from webcam 
 			2. Haarcascade for face detection on each frame
 			3. sending face to CNN model
 			4. predicting whether a person is wearing mask or not
 			
 		''')
 
-def html_component(path, width=500, height=500):
-    """ 
-    Custom component to open hmtl with codecs util
-            path = "webcam2.html"
-    """
-    calc_file = codecs.open(path, 'r')
-    page = calc_file.read()
-    stc.html(page, width=width, height=height, scrolling=False)
-	
+
 def detect_on_image(image):
     image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     image_copy = image.copy()     # copy of image
@@ -72,11 +62,10 @@ def detect_on_image(image):
         return image_copy, prob, flag
         
 def detect_live_stream():
-    html_component(path="webcam2.html", width=600, height=600)
     cap = cv2.VideoCapture(0)
     cap.set(10, 300)
 
-    while run:
+    while True:
 
         ret, frame = cap.read()
 
@@ -132,7 +121,6 @@ def main():
     choice = st.sidebar.selectbox("Pick something fun", activities)
 
     if choice == "Home":
-    	st.write("Go to the Live section to detect on live stream")
     	st.write("Go to the About section from the sidebar to learn more about it.")
         
         # You can specify more file types below if you want
