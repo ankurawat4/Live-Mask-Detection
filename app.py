@@ -30,10 +30,8 @@ def detect_on_image(image):
     
     faces = face_cascade.detectMultiScale(image_gray, 1.3, 5) 
     if faces == ():
-	flag = 0
-	prob = 0
-	#         print(' No face in frame.')
-
+        flag, prob = 3,0
+        st.write("No face detected.")
         return image_copy, prob, flag
         
     else:
