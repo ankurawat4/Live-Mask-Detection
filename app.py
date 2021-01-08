@@ -15,10 +15,11 @@ def about():
 		**In this pandemic mask is not a choice but need. This web app here tells you whether
         a person is wearing a mask or not in live stream**
 
-		The model has four stages:
-            	1. Haarcascade for face detection on image. 
+		The model has three stages:
+            1. Haarcascade for face detection on image
 			2. sending face to CNN model
 			3. predicting whether a person is wearing mask or not
+			 
 			
 		''')
 
