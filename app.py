@@ -16,10 +16,9 @@ def about():
         a person is wearing a mask or not in live stream**
 
 		The model has four stages:
-            		1. Taking frame by frame stream from webcam 
-			2. Haarcascade for face detection on each frame
-			3. sending face to CNN model
-			4. predicting whether a person is wearing mask or not
+            	1. Haarcascade for face detection on image. 
+			2. sending face to CNN model
+			3. predicting whether a person is wearing mask or not
 			
 		''')
 
@@ -111,7 +110,8 @@ def detect_live_stream():
 	
         if cv2.waitKey(1) & 0xFF==ord('q'):
             break
-
+    cap.release()
+    cv2.destroyAllWindows()
 
 def main():
     st.title("Mask detection App :mask: ")
