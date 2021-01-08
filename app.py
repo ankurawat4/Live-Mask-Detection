@@ -12,7 +12,7 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 def about():
 	st.write(
 		'''
-		**In this pandemic mask is not a choice but need. This web app here tells you whether
+		**In this pandemic mask is not a choice but need. This webapp here tells you whether
         a person is wearing a mask or not in live stream**
 
 		The model has three stages:
