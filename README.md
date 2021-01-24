@@ -1,5 +1,5 @@
 # Live-Mask-Detection
-In this covid pandemic mask is not a choice but need. Here in this project i have trained a model which predicts whether a person is wearing a mask or not and aslo simultaneously detects it in live stream.
+In this covid pandemic mask is not a choice but need. Here in this project i have trained a model which predicts whether a person is wearing a mask or not and also simultaneously detects it in live stream.
 
 Two models are trained first is a simple CNN model and second is transfer learning model using inception_v3.
 live prediction is done using openCV.
